@@ -43,4 +43,8 @@ class AppNavigator {
   static Future? push({required Routes route}) {
     return navigatorKey.currentState?.pushNamed(_Paths.of(route));
   }
+
+  static Future? pushReplace({required Routes route}) {
+    return navigatorKey.currentState?.pushReplacementNamed(_Paths.of(route));
+  }
 }

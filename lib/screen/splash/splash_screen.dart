@@ -1,9 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:pokedex_app/routes.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pokedex_app/constants/app_colors.dart';
+import 'package:pokedex_app/logic/bloc/page_changer_bloc.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     Timer(
       const Duration(seconds: 3),
-      () => AppNavigator.push(route: Routes.home),
+      () => BlocProvider.of<PageChangerBloc>(context).add(SplashScreenLoaded()),
     );
     super.initState();
   }
@@ -29,11 +29,14 @@ class _SplashScreenState extends State<SplashScreen> {
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Center(
-            child: Image.asset(
-              'assets/animations/pikachu.gif',
-              width: double.infinity,
-              fit: BoxFit.cover,
+          Container(
+            color: AppColors.splashScreenBackgroundColor,
+            child: Center(
+              child: Image.asset(
+                'assets/animations/pikachu.gif',
+                width: double.infinity,
+                fit: BoxFit.cover,
+              ),
             ),
           )
         ],
