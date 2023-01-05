@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:pokedex_app/screen/error/error_screen.dart';
 import 'package:pokedex_app/screen/home/home_page.dart';
 import 'package:pokedex_app/screen/splash/splash_screen.dart';

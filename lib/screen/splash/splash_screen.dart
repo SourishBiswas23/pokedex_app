@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pokedex_app/constants/app_colors.dart';
 import 'package:pokedex_app/init.dart';
-import 'package:pokedex_app/logic/bloc/page_changer_bloc.dart';
+import 'package:pokedex_app/logic/bloc/page_changer/page_changer_bloc.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

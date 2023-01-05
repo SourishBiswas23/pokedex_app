@@ -2,7 +2,8 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pokedex_app/data/provider/pokemon_data.dart';
 import 'package:pokedex_app/data/repository/pokemon_repository.dart';
-import 'package:pokedex_app/logic/bloc/page_changer_bloc.dart';
+
+import 'logic/bloc/page_changer/page_changer_bloc.dart';
 
 class Init {
   static Future initialize(BuildContext context) async {

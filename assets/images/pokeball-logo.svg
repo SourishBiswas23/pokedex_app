@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="400"
+   height="400"
+   viewBox="0 0 105.83333 105.83334"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="pokeball-logo.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="1.4303956"
+     inkscape:cx="203.09067"
+     inkscape:cy="172.6795"
+     inkscape:window-width="1920"
+     inkscape:window-height="1000"
+     inkscape:window-x="0"
+     inkscape:window-y="38"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g847"
+       transform="matrix(-1.9940341,0.87732403,-0.89374033,-1.9606772,432.55042,-6.622053)"
+       style="stroke-width:0.461572">
+      <g
+         id="g342"
+         transform="rotate(24.650772,169.91728,45.664655)"
+         style="fill:#000000;stroke-width:0.461572">
+        <path
+           id="path113"
+           style="fill:#000000;stroke-width:0.122124"
+           d="m 169.91056,21.029208 a 24.635452,24.635452 0 0 0 -24.16803,19.930566 h 9.4511 a 15.438661,15.73831 0 0 1 14.71693,-11.033435 15.438661,15.73831 0 0 1 14.71745,11.033435 h 9.4511 A 24.635452,24.635452 0 0 0 169.91056,21.029208 Z m -24.16855,29.340328 a 24.635452,24.635452 0 0 0 24.16855,19.930567 24.635452,24.635452 0 0 0 24.18199,-19.930567 h -9.46454 A 15.438661,15.73831 0 0 1 169.91056,61.402455 15.438661,15.73831 0 0 1 155.19363,50.369536 Z" />
+        <path
+           id="ellipse277"
+           style="fill:#000000;stroke-width:0.0547051"
+           d="m 180.95515,45.664654 a 11.037872,11.03292 0 0 1 -11.03787,11.03292 11.037872,11.03292 0 0 1 -11.03787,-11.03292 11.037872,11.03292 0 0 1 11.03787,-11.03292 11.037872,11.03292 0 0 1 11.03787,11.03292 z" />
+      </g>
+    </g>
+  </g>
+</svg>
