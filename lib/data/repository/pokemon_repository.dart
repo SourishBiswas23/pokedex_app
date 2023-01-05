@@ -26,7 +26,7 @@ class PokemonRepository {
       height: data["height"],
       weight: data["weight"],
       typeOfPokemon:
-          List<String>.from(data["typeofpokemon"]) ?? ['No such pokemon'],
+          List<String>.from(data["typeofpokemon"] ?? ['No such pokemon']),
       hp: data["hp"] ?? '-1',
       attack: data["attack"] ?? '-1',
       defense: data["defense"] ?? '-1',

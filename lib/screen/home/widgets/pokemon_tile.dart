@@ -1,16 +1,16 @@
 import 'package:flutter/widgets.dart';
 import 'package:pokedex_app/constants/app_colors.dart';
 import 'package:pokedex_app/constants/text_styles.dart';
-import 'package:pokedex_app/data/repository/pokemon_repository.dart';
+import 'package:pokedex_app/data/models/pokemon_model.dart';
 
-Container pokemonTile(int index) {
+Container pokemonTile(PokemonModel pokemon) {
   return Container(
     margin: const EdgeInsets.all(5),
     decoration: BoxDecoration(
       color: AppColors.pokemonCardColor,
       border: Border.all(
         width: 2,
-        color: PokemonRepository().pokemonList[index].pokemonColor,
+        color: pokemon.pokemonColor,
       ),
       borderRadius: const BorderRadius.all(
         Radius.circular(10),
@@ -27,9 +27,9 @@ Container pokemonTile(int index) {
               Padding(
                 padding: const EdgeInsets.only(right: 10, top: 5),
                 child: Text(
-                  PokemonRepository().pokemonList[index].id,
+                  pokemon.id,
                   style: TextStyle(
-                    color: PokemonRepository().pokemonList[index].pokemonColor,
+                    color: pokemon.pokemonColor,
                   ),
                 ),
               ),
@@ -37,7 +37,7 @@ Container pokemonTile(int index) {
           ),
         ),
         Image.network(
-          PokemonRepository().pokemonList[index].imageUrl,
+          pokemon.imageUrl,
           fit: BoxFit.cover,
         ),
         Expanded(
@@ -48,11 +48,11 @@ Container pokemonTile(int index) {
                 bottomLeft: Radius.circular(5),
                 bottomRight: Radius.circular(5),
               ),
-              color: PokemonRepository().pokemonList[index].pokemonColor,
+              color: pokemon.pokemonColor,
             ),
             child: Center(
               child: Text(
-                PokemonRepository().pokemonList[index].name,
+                pokemon.name,
                 style: TextStyles.pokemonTileTextStyle,
               ),
             ),

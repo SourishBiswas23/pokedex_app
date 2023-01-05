@@ -18,10 +18,12 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (context) => PageChangerBloc(),
+          create: (context) => PokemonDataBloc(),
         ),
         BlocProvider(
-          create: (context) => PokemonDataBloc(),
+          create: (context) => PageChangerBloc(
+            pokemonDataBloc: BlocProvider.of<PokemonDataBloc>(context),
+          ),
         ),
       ],
       child: MaterialApp(
