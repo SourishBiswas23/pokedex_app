@@ -4,3 +4,5 @@ part of 'page_changer_bloc.dart';
 abstract class PageChangerEvent {}
 
 class SplashScreenLoaded extends PageChangerEvent {}
+
+class AppInitialized extends PageChangerEvent {}

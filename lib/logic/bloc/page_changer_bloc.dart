@@ -9,9 +9,20 @@ class PageChangerBloc extends Bloc<PageChangerEvent, PageChangerState> {
   PageChangerBloc() : super(SplashScreenState(isLoaded: false)) {
     on<SplashScreenLoaded>(
       (event, emit) async {
-        await AppNavigator.pushReplace(route: Routes.home);
-        emit(SplashScreenState(isLoaded: true));
+        isSplashScreenLoaded = true;
+        if (isAppInitialized) {
+          await AppNavigator.pushReplace(route: Routes.home);
+        }
       },
     );
+    on<AppInitialized>((event, emit) async {
+      isAppInitialized = true;
+      if (isSplashScreenLoaded) {
+        await AppNavigator.pushReplace(route: Routes.home);
+      }
+    });
   }
+
+  bool isSplashScreenLoaded = false;
+  bool isAppInitialized = false;
 }
