@@ -15,3 +15,5 @@ class LoadPokemonDetail extends PageChangerEvent {
 class LoadLoadingScreen extends PageChangerEvent {}
 
 class LoadPokemonInfoScreen extends PageChangerEvent {}
+
+class LoadPokemonNotFoundScreen extends PageChangerEvent {}

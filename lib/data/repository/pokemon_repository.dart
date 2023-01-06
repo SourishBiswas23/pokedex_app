@@ -25,6 +25,14 @@ class PokemonRepository {
     return pokemonModel;
   }
 
+  PokemonModel getPokemonByName(String name) {
+    name = name.trim().toLowerCase();
+    PokemonModel pokemonModel = _pokemonList.firstWhere(
+      (element) => element.name.toLowerCase() == name,
+    );
+    return pokemonModel;
+  }
+
   PokemonModel jsonToPokemon(Map<String, dynamic> data) {
     return PokemonModel(
       name: data["name"] ?? 'No such pokemon',

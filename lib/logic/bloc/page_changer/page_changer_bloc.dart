@@ -42,6 +42,13 @@ class PageChangerBloc extends Bloc<PageChangerEvent, PageChangerState> {
       }
       await AppNavigator.push(route: Routes.pokemonInfo);
     });
+    on<LoadPokemonNotFoundScreen>((event, emit) async {
+      if (isLoading) {
+        AppNavigator.pop();
+        isLoading = false;
+      }
+      await AppNavigator.push(route: Routes.pokemonNotFoundScreen);
+    });
   }
   final PokemonDataBloc _pokemonDataBloc;
   bool isSplashScreenLoaded = false;

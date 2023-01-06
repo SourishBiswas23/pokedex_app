@@ -11,7 +11,7 @@ Widget pokemonTile(PokemonModel pokemon, BuildContext context) {
 
   return GestureDetector(
     onTap: () => pokemonInfoBloc.add(
-      LoadPokemon(id: pokemon.id),
+      LoadPokemonById(id: pokemon.id),
     ),
     child: Container(
       margin: const EdgeInsets.all(5),

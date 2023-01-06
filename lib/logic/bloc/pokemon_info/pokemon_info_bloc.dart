@@ -11,10 +11,19 @@ class PokemonInfoBloc extends Bloc<PokemonInfoEvent, PokemonInfoState> {
   PokemonInfoBloc({required PageChangerBloc pageChangerBloc})
       : _pageChangerBloc = pageChangerBloc,
         super(PokemonInfoInitial()) {
-    on<LoadPokemon>((event, emit) {
+    on<LoadPokemonById>((event, emit) {
       _pageChangerBloc.add(LoadLoadingScreen());
       _pokemon = PokemonRepository().getPokemonById(event.id);
       _pageChangerBloc.add(LoadPokemonInfoScreen());
+    });
+    on<LoadPokemonByName>((event, emit) {
+      _pageChangerBloc.add(LoadLoadingScreen());
+      try {
+        _pokemon = PokemonRepository().getPokemonByName(event.name);
+        _pageChangerBloc.add(LoadPokemonInfoScreen());
+      } on StateError catch (e) {
+        _pageChangerBloc.add(LoadPokemonNotFoundScreen());
+      }
     });
   }
 
