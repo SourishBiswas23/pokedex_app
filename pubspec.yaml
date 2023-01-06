@@ -38,6 +38,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_bloc: ^8.1.1
   flutter_svg: ^1.1.6
+  font_awesome_flutter: ^10.3.0
 
 dev_dependencies:
   flutter_test:
@@ -84,8 +85,11 @@ flutter:
     - family: Livvic
       fonts:
         - asset: assets/fonts/Livvic/Livvic-Regular.ttf
+        # - weight: 500
         - asset: assets/fonts/Livvic/Livvic-Light.ttf
+        # - weight: 300
         - asset: assets/fonts/Livvic/Livvic-Bold.ttf
+        # - weight: 700
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:

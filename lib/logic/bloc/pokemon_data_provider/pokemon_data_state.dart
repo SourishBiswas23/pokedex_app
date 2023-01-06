@@ -1,4 +1,4 @@
-part of 'pokemon_data_bloc.dart';
+part of '../pokemon_data_provider/pokemon_data_bloc.dart';
 
 @immutable
 abstract class PokemonDataState {}

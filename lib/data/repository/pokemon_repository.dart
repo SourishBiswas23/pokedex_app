@@ -10,12 +10,20 @@ class PokemonRepository {
   }
 
   PokemonRepository._internal() {
-    pokemonJsonDataList = PokemonData().pokemonJsonList;
-    pokemonList = pokemonJsonDataList.map((e) => jsonToPokemon(e)).toList();
+    _pokemonJsonDataList = PokemonData().pokemonJsonList;
+    _pokemonList = _pokemonJsonDataList.map((e) => jsonToPokemon(e)).toList();
   }
 
-  late final List<PokemonModel> pokemonList;
-  late final List<Map<String, dynamic>> pokemonJsonDataList;
+  late final List<PokemonModel> _pokemonList;
+  late final List<Map<String, dynamic>> _pokemonJsonDataList;
+
+  List<PokemonModel> get pokemonList => _pokemonList;
+
+  PokemonModel getPokemonById(String id) {
+    PokemonModel pokemonModel =
+        _pokemonList.firstWhere((element) => element.id == id);
+    return pokemonModel;
+  }
 
   PokemonModel jsonToPokemon(Map<String, dynamic> data) {
     return PokemonModel(

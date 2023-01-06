@@ -1,5 +1,3 @@
-import 'package:bloc/bloc.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
 import 'package:pokedex_app/data/repository/pokemon_repository.dart';
@@ -31,8 +29,22 @@ class PageChangerBloc extends Bloc<PageChangerEvent, PageChangerState> {
         await AppNavigator.pushReplace(route: Routes.home);
       }
     });
+    on<LoadLoadingScreen>((event, emit) async {
+      if (!isLoading) {
+        isLoading = true;
+        await AppNavigator.push(route: Routes.loadingScreen);
+      }
+    });
+    on<LoadPokemonInfoScreen>((event, emit) async {
+      if (isLoading) {
+        AppNavigator.pop();
+        isLoading = false;
+      }
+      await AppNavigator.push(route: Routes.pokemonInfo);
+    });
   }
   final PokemonDataBloc _pokemonDataBloc;
   bool isSplashScreenLoaded = false;
   bool isAppInitialized = false;
+  bool isLoading = false;
 }

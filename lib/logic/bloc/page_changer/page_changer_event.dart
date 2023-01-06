@@ -11,3 +11,7 @@ class LoadPokemonDetail extends PageChangerEvent {
   LoadPokemonDetail({required this.pokemonId});
   final String pokemonId;
 }
+
+class LoadLoadingScreen extends PageChangerEvent {}
+
+class LoadPokemonInfoScreen extends PageChangerEvent {}

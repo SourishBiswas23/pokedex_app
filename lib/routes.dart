@@ -1,19 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:pokedex_app/screen/error/error_screen.dart';
 import 'package:pokedex_app/screen/home/home_page.dart';
+import 'package:pokedex_app/screen/loading/loading_screen.dart';
+import 'package:pokedex_app/screen/pokemonInfo/pokemon_info.dart';
 import 'package:pokedex_app/screen/splash/splash_screen.dart';
 
-enum Routes { splash, home, pokemonInfo }
+enum Routes { splash, home, pokemonInfo, loadingScreen }
 
 class _Paths {
   static const String splash = '/';
   static const String home = '/home';
   static const String pokemonInfo = '/home/pokemonInfo';
+  static const String loadingScreen = '/home/loading-screen';
 
   static const Map<Routes, String> _pathMap = {
     Routes.splash: _Paths.splash,
     Routes.home: _Paths.home,
     Routes.pokemonInfo: _Paths.pokemonInfo,
+    Routes.loadingScreen: _Paths.loadingScreen,
   };
 
   static String of(Routes route) => _pathMap[route] ?? splash;
@@ -30,11 +34,19 @@ class AppNavigator {
         );
       case _Paths.home:
         return MaterialPageRoute(
-          builder: (context) => HomePage(),
+          builder: (context) => const HomePage(),
+        );
+      case _Paths.pokemonInfo:
+        return MaterialPageRoute(
+          builder: (context) => const PokemonInfo(),
+        );
+      case _Paths.loadingScreen:
+        return MaterialPageRoute(
+          builder: (context) => const LoadingScreen(),
         );
       default:
         return MaterialPageRoute(
-          builder: (context) => ErrorScreen(),
+          builder: (context) => const ErrorScreen(),
         );
     }
   }
@@ -45,5 +57,9 @@ class AppNavigator {
 
   static Future? pushReplace({required Routes route}) {
     return navigatorKey.currentState?.pushReplacementNamed(_Paths.of(route));
+  }
+
+  static void pop() {
+    return navigatorKey.currentState?.pop();
   }
 }

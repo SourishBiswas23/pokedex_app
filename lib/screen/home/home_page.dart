@@ -28,7 +28,7 @@ class HomePage extends StatelessWidget {
             ),
             itemCount: pokemonList.length,
             itemBuilder: (context, index) {
-              return pokemonTile(pokemonList[index]);
+              return pokemonTile(pokemonList[index], context);
             },
           ),
         ),
