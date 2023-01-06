@@ -1,16 +1,28 @@
 # pokedex_app
 
-A new Flutter project.
+This is a pokedex app built using the Flutter Framework and the Bloc library
 
-## Getting Started
+## Screen Shots
 
-This project is a starting point for a Flutter application.
+![Screen shots are present inside the screenshots folder of the project](./screenshots/pokedex-1.jpg)
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![Screen shots are present inside the screenshots folder of the project](./screenshots/pokedex-2.jpg)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+![Screen shots are present inside the screenshots folder of the project](./screenshots/pokedex-3.jpg)
+
+
+![Screen shots are present inside the screenshots folder of the project](./screenshots/pokedex-4.jpg)
+
+## Installation
+
+Clone the project on your computer. Open a terminal, navigate to the lib folder of the project and run `flutter run -v`
+
+## Thanks 
+
+- [Ricardo Schiniegoski](https://www.figma.com/community/file/979132880663340794) for providing the design from which this app is inspired.
+- [MaceGaleon](https://tenor.com/view/pikachu-pokemon-cute-adorable-gif-15757943?utm_source=share-button&utm_medium=Social&utm_content=pinterest) for the pikachu gif 
+- [Flutter](https://flutter.dev/) for the awesome framework
+
+

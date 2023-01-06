@@ -18,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     Init.initialize(context);
     Timer(
-      const Duration(seconds: 3),
+      const Duration(seconds: 4),
       () => BlocProvider.of<PageChangerBloc>(context).add(SplashScreenLoaded()),
     );
     super.initState();
